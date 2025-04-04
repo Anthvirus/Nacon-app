@@ -28,14 +28,6 @@ export default function Footer() {
           <ul className="mt-2 space-y-2">
             <li>
               <a
-                href="/contact"
-                className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
-              >
-                Tracking
-              </a>
-            </li>
-            <li>
-              <a
                 href="/services"
                 className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
               >

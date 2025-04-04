@@ -1,38 +1,7 @@
-import CargoImage from "../assets/Cargo-freight.jpg";
-import ShipImage from "../assets/Ship-freight.jpg";
-import LogisticsImage from "../assets/Logistics.jpg";
-import ClearingImage from "../assets/clearing.jpg";
-import TrackingImage from "../assets/Tracking.jpg";
 import Button from "../components/Button";
-export default function ServiceSection() {
-  const Services = [
-    {
-      name: "Logistics Services",
-      about: "We provide an integrated network of transport ensuring shipment integrity.",
-      image: LogisticsImage,
-    },
-    {
-      name: "Sea Freight",
-      about: "Our freight forwarding services, ensure that your shipment is delivered to the desired destination.",
-      image: ShipImage,
-    },
-    {
-      name: "Safety",
-      about: "We ensure that each shipment is safely delivered to the desired destination.",
-      image: CargoImage,
-    },
-    {
-      name: "Cargo Status Tracking",
-      about: "We provide services that allow for clients to track the progress of their shipment with us.",
-      image: TrackingImage,
-    },
-    {
-      name: "Custom Clearance",
-      about: "We handle the clearance of your shipment from Customs ensuring shipment integrity.",
-      image: ClearingImage,
-    },
-  ];
+import Services from "../components/Services"
 
+export default function ServiceSection() {
   return (
     <section className="w-full my-20 xl:my-36 bg-inherit gap-10 flex flex-col">
       <div className="xl:w-1/2 m-4 lg:m-12 flex flex-col gap-6">

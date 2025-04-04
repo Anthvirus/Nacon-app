@@ -13,6 +13,9 @@
   --NavBackgroundTwo: #060605;
   --NavBackground: #06060500;
 }
+nav{
+  background: linear-gradient(var(--NavBackgroundTwo), var(--NavBackground));
+}
 .header{
   background-image: url(../src/assets/Image-two.jpg);
   background-color: var(--Background);
