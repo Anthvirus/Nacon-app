@@ -3,6 +3,8 @@ import HeroSection from "../components/Hero";
 import AboutSection from "../components/AboutSection";
 import ServiceSection from "../components/ServiceSection";
 import PartnerSection from "../components/PartnerSection";
+import Footer from "../components/Footer";
+
 export default function Home() {
   return (
     <div className="w-full bg-[var(--Secondary)] min-h-max">
@@ -15,6 +17,7 @@ export default function Home() {
         <ServiceSection />
         <PartnerSection/>
       </section>
+      <Footer/>
     </div>
   );
 }
