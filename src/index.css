@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 :root{
-  --Primary: #ffffff;
+  --Primary: #f8f8f8;
   --Secondary: #f2f0ec;
   --Accent: #011429;
   --Default: #030303;
@@ -20,9 +20,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0vh;
-}
-nav{
-  background: linear-gradient(var(--NavBackgroundTwo), var(--NavBackground));
 }
 body{
 font-family: "Chakra Petch", sans-serif;

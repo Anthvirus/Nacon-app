@@ -1,29 +1,39 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
+  var PhoneNo = "+2348033163492"; //Phone Number
+
   return (
     <footer className="w-full bg-[var(--Accent)] text-[var(--Primary)] py-8 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         <div>
           <p className="text-[var(--Primary)] mt-2">
-            123 Maritime Road, Lagos, Nigeria
+            24 Randle Road Apapa Lagos, Nigeria
           </p>
-          <p className="text-[var(--Primary)]">Phone: +234 800 123 4567</p>
+          <p className="text-[var(--Primary)]">Phone: {PhoneNo}</p>
           <p>
             Email:{" "}
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=info@nacon.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=naconinvestmenltd@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              info@nacon.com
+              naconinvestmentltd@gmail.com
             </a>
           </p>
         </div>
 
         <div>
           <ul className="mt-2 space-y-2">
+            <li>
+              <a
+                href="/contact"
+                className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
+              >
+                Tracking
+              </a>
+            </li>
             <li>
               <a
                 href="/services"
@@ -38,14 +48,6 @@ export default function Footer() {
                 className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
               >
                 About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
-              >
-                Contact
               </a>
             </li>
           </ul>

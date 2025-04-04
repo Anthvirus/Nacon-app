@@ -8,31 +8,27 @@ export default function ServiceSection() {
   const Services = [
     {
       name: "Logistics Services",
-      about: "",
+      about: "We provide an integrated network of transport ensuring shipment integrity.",
       image: LogisticsImage,
     },
     {
       name: "Sea Freight",
-      about: "",
+      about: "Our freight forwarding services, ensure that your shipment is delivered to the desired destination.",
       image: ShipImage,
     },
     {
-      name: "Air Freight",
-      about: "",
+      name: "Safety",
+      about: "We ensure that each shipment is safely delivered to the desired destination.",
       image: CargoImage,
     },
     {
       name: "Cargo Status Tracking",
-      about: `From the manufacturer to consumers, from one nation to the other. Our
-          years of experience in logistics has empowered us to ensure that you
-          receive the best through,`,
+      about: "We provide services that allow for clients to track the progress of their shipment with us.",
       image: TrackingImage,
     },
     {
       name: "Custom Clearance",
-      about: `From the manufacturer to consumers, from one nation to the other. Our
-          years of experience in logistics has empowered us to ensure that you
-          receive the best through`,
+      about: "We handle the clearance of your shipment from Customs ensuring shipment integrity.",
       image: ClearingImage,
     },
   ];
@@ -46,18 +42,18 @@ export default function ServiceSection() {
         <p className="text-md lg:text-2xl tracking-wide">
           From the manufacturer to consumers, from one nation to the other. Our
           years of experience in logistics has empowered us to ensure that you
-          receive the best through,
+          receive the best. We offer,
         </p>
       </div>
       <div className="flex lg:flex-row gap-4 lg:gap-8 justify-center mx-4 lg:mx-12 flex-col">
         {Services.map((Service) => (
           <div
             key={Service.name}
-            className="flex-1 border-2 h-min group hover:grayscale-0 grayscale-25 overflow-hidden hover:shadow-xl"
+            className="flex-1 border h-[32.5rem] group hover:grayscale-0 grayscale-25 overflow-hidden hover:shadow-xl"
           >
             <img
               src={Service.image}
-              className="max-h-3/5 w-full group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-110"
+              className="h-1/2 w-full group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-110"
               alt={Service.alt}
             />
             <div className="h-2/5 w-full px-4 py-5 flex flex-col gap-3 items-start">

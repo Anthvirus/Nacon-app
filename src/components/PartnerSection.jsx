@@ -1,4 +1,5 @@
 import HapagLogo from "../assets/Hapag.svg";
+import GoldLogo from "../assets/Goldstar.jpg"
 import OneLogo from "../assets/One.svg";
 import OOCLLogo from "../assets/OOCL.svg";
 import MaerskLogo from "../assets/Maersk.svg";
@@ -11,6 +12,7 @@ import COSCOLogo from "../assets/COSCO.png";
 const Partners = [
   { name: "Arkas", image: ArkasLogo },
   { name: "COSCO", image: COSCOLogo },
+  { name: "Goldstar", image: GoldLogo },
   { name: "Grimaldi", image: GrimaldiLogo },
   { name: "Hapag", image: HapagLogo },
   { name: "Maersk", image: MaerskLogo },
@@ -34,13 +36,13 @@ export default function PartnerSection() {
   return (
     <section className="w-full bg-[var(--Primary)] overflow-hidden pt-4 pb-20 lg:pb-32 mt-12 flex-col flex gap-16 lg:gap-24">
       <h1 className="text-3xl lg:text-5xl mt-4 font-extrabold ml-2 lg:ml-10">
-        In Good Company
+        Our Trusted Partners
       </h1>
       <div className="relative">
         <div
           className="flex gap-4 lg:gap-16 animate-marquee"
           style={{
-            animation: "marquee 45s linear infinite",
+            animation: "marquee 120s linear infinite",
             minWidth: "200%",
           }}
         >
@@ -49,7 +51,7 @@ export default function PartnerSection() {
               <img
                 src={partner.image}
                 alt={partner.name}
-                className="h-8 lg:h-28 w-auto object-contain"
+                className="h-10 lg:h-28 w-auto object-contain"
               />
             </div>
           ))}
