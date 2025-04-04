@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=ChakraPetch:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+}
+:root{
+  --Primary: #ffffff;
+  --Secondary: #f2f0ec;
+  --Accent: #123458;
+  --Default: #030303;
+  --Background: #06060565;
+  --NavBackgroundTwo: #060605;
+  --NavBackground: #06060500;
+}
+.header{
+  background-image: url(../src/assets/Image-two.jpg);
+  background-color: var(--Background);
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0vh;
+}
+nav{
+  background: linear-gradient(var(--NavBackgroundTwo), var(--NavBackground));
+}
+body{
+font-family: "Chakra Petch", sans-serif;
+}
