@@ -9,12 +9,10 @@
   --Secondary: #f2f0ec;
   --Accent: #011429;
   --Default: #030303;
-  --Background: #06060565;
-  --NavBackgroundTwo: #060605;
-  --NavBackground: #06060500;
-}
-nav{
-  background: linear-gradient(var(--NavBackgroundTwo), var(--NavBackground));
+  --Background: #06060554;
+  --NavSecondary: #ffffffe3;
+  --NavBackgroundTwo: #ffffff84;
+  --NavBackground: #ffffff00;
 }
 .header{
   background-image: url(../src/assets/Image-two.jpg);
@@ -25,5 +23,8 @@ nav{
   background-position: 0vh;
 }
 body{
-font-family: "Chakra Petch", sans-serif;
+font-family: "Chakra Petch", serif;
+}
+nav{
+  background: linear-gradient(var(--Primary), var(--NavSecondary), var(--NavBackgroundTwo), var(--NavBackground));
 }
