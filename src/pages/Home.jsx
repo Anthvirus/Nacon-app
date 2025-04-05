@@ -4,20 +4,22 @@ import AboutSection from "../components/AboutSection";
 import ServiceSection from "../components/ServiceSection";
 import PartnerSection from "../components/PartnerSection";
 import Footer from "../components/Footer";
+import { useRef } from "react";
 
 export default function Home() {
+  const footerRef = useRef();
   return (
-    <div className="w-full bg-[var(--Secondary)] min-h-max">
+    <div className="max-w-screen bg-[var(--Secondary)] min-h-max">
       <header className="flex flex-col min-h-[70vh] xl:h-max header">
         <Navbar />
-        <HeroSection />
+        <HeroSection footerRef={footerRef}/>
       </header>
       <section>
         <AboutSection />
         <ServiceSection />
         <PartnerSection/>
       </section>
-      <Footer/>
+      <Footer footerRef={footerRef} />
     </div>
   );
 }

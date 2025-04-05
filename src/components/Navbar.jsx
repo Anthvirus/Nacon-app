@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import NaconLogo from "../assets/Nacon.png";
 import Services from "../components/Services";
 import { FaChevronDown } from "react-icons/fa";
 
 const Links = [
-  { name: "Home", url: "#" },
-  { name: "About Us", url: "#" },
-  { name: "Services", url: "#" },
+  { name: "Home", url: "/" },
+  { name: "About Us", url: "/about" },
+  { name: "Services", url: "/services" },
   { name: "Cargo Status", url: "#" },
 ];
 
@@ -17,39 +18,41 @@ export default function Navbar() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   return (
-    <nav className="min-w-full h-24 flex items-center px-4 lg:px-20 fixed top-0 z-50 justify-between xl:justify-around">
-      <div className="lg:text-2xl tracking-wider font-extrabold cursor-pointer flex items-center gap-4">
-        <img src={NaconLogo} className="size-32" />
-        <h1 className="hidden lg:flex uppercase text-[var(--Accent)] font-extrabold">Nacon Investment</h1>
-      </div>
+    <nav className="w-screen h-24 flex items-center pl-2 pr-6 md:px-4 lg:px-20 fixed top-0 z-50 justify-between xl:justify-around">
+      <Link to="/" className=" text-md sm:text-lg lg:text-2xl tracking-wider font-extrabold cursor-pointer flex items-center md:gap-4">
+        <img src={NaconLogo} className="size-20 md:size-32" />
+        <h1 className="uppercase text-[var(--Accent)] font-extrabold">
+          Nacon Investment
+        </h1>
+      </Link>
 
       <div className="xl:flex gap-24 hidden">
-        {Links.map((Link) => (
-          <ul key={Link.name} className="relative">
+        {Links.map((LinkItem) => (
+          <ul key={LinkItem.name} className="relative">
             <dl
               className="text-lg cursor-pointer items-center flex gap-4 font-semibold text-[var(--Accent)] duration-500 delay-[2.5ms]"
               onMouseEnter={() =>
-                Link.name === "Services" && setShowDropdown(true)
+                LinkItem.name === "Services" && setShowDropdown(true)
               }
               onMouseLeave={() =>
-                Link.name === "Services" && setShowDropdown(false)
+                LinkItem.name === "Services" && setShowDropdown(false)
               }
             >
-              <a className="hover:opacity-60">{Link.name}</a>
-              {Link.name === "Services" && (
+              <Link className="hover:opacity-60" to={LinkItem.url}>{LinkItem.name}</Link>
+              {LinkItem.name === "Services" && (
                 <FaChevronDown className="ml-1 inline-block" />
               )}
-              {Link.name === "Services" && showDropdown && (
+              {LinkItem.name === "Services" && showDropdown && (
                 <div className="absolute top-8 left-0 bg-[var(--Secondary)] text-[var(--Accent)] w-72 z-50">
                   <ul className="text-sm flex flex-col">
                     {Services.map((item) => (
-                      <li key={item.name} className=" hover:bg-[var(--Accent)] hover:text-[var(--Secondary)] p-4">
-                        <a
-                          href={item.url}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
+                      <Link
+                        to={`/services#`+item.id}
+                        key={item.name}
+                        className=" hover:bg-[var(--Accent)] hover:text-[var(--Secondary)] p-4"
+                      >
+                        <p>{item.name}</p>
+                      </Link>
                     ))}
                   </ul>
                 </div>
@@ -76,9 +79,9 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col text-lg">
-          {Links.map((Link) => (
-            <li key={Link.name} className="p-3 hover:opacity-80 cursor-pointer">
-              {Link.name === "Services" ? (
+          {Links.map((LinkItem) => (
+            <li key={LinkItem.name} className="p-3 hover:opacity-80 cursor-pointer">
+              {LinkItem.name === "Services" ? (
                 <div>
                   <div
                     onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
@@ -86,28 +89,35 @@ export default function Navbar() {
                   >
                     <span>Services</span>
                     <span>
-                      <FaChevronDown className={mobileDropdownOpen ? "rotate-180" : "rotate-0"} />
+                      <FaChevronDown
+                        className={
+                          mobileDropdownOpen ? "rotate-180" : "rotate-0"
+                        }
+                      />
                     </span>
                   </div>
 
                   {mobileDropdownOpen && (
                     <ul className="mt-2 text-sm text-[var(--Accent)] flex flex-col">
                       {Services.map((item) => (
-                        <li key={item.name} className="p-3 hover:text-[var(--Secondary)] hover:bg-[var(--Accent)] cursor-pointer">
-                          <a
-                            href={item.url}
-                          >
-                            {item.name}
-                          </a>
-                        </li>
+                        <Link
+                          to={`/services#`+item.id}
+                          key={item.name}
+                          className="p-3 hover:text-[var(--Secondary)] hover:bg-[var(--Accent)] cursor-pointer"
+                        >
+                          {item.name}
+                        </Link>
                       ))}
                     </ul>
                   )}
                 </div>
               ) : (
-                <a href={Link.url} className="hover:text-[var(--Accent)] block">
-                  {Link.name}
-                </a>
+                <Link
+                  to={LinkItem.url}
+                  className="hover:text-[var(--Accent)] block"
+                >
+                  {LinkItem.name}
+                </Link>
               )}
             </li>
           ))}

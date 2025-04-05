@@ -1,10 +1,11 @@
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer(props) {
   var PhoneNo = "+2348033163492"; //Phone Number
 
   return (
-    <footer className="w-full bg-[var(--Accent)] text-[var(--Primary)] py-8 px-6">
+    <footer className="w-full bg-[var(--Accent)] text-[var(--Primary)] py-8 px-6" ref={props.footerRef}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         <div>
           <p className="text-[var(--Primary)] mt-2">
@@ -13,61 +14,61 @@ export default function Footer() {
           <p className="text-[var(--Primary)]">Phone: {PhoneNo}</p>
           <p>
             Email:{" "}
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=naconinvestmenltd@gmail.com"
+            <Link
+              to="https://mail.google.com/mail/?view=cm&fs=1&to=naconinvestmentltd@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
               naconinvestmentltd@gmail.com
-            </a>
+            </Link>
           </p>
         </div>
 
         <div>
           <ul className="mt-2 space-y-2">
             <li>
-              <a
-                href="/services"
+              <Link
+                to="/services"
                 className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="text-[var(--Primary)] hover:underline underline-offset-4 text-md lg:text-xl"
               >
                 About Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
         <div>
           <div className="flex justify-start space-x-4 mt-3">
-            <a
-              href="https://facebook.com"
+            <Link
+              to="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook className="text-[var(--Primary)] hover:text-blue-500 text-2xl" />
-            </a>
-            <a
-              href="https://twitter.com"
+            </Link>
+            <Link
+              to="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram className="text-[var(--Primary)] hover:text-pink-500 text-2xl" />
-            </a>
-            <a
-              href="https://linkedin.com"
+            </Link>
+            <Link
+              to="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin className="text-[var(--Primary)] hover:text-blue-600 text-2xl" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

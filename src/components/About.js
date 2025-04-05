@@ -1,0 +1,8 @@
+const About = `Nacon Investment Limited is a world-class freight forwarding and logistics company with over 25 years of expertise in the maritime industry. Renowned for our reliability and excellence, we have established ourselves as a trusted leader in freight forwarding, logistics, and supply chain solutions.
+For over 2 decades we have been connecting businesses to international markets, ensuring that each shipment is handled with the utmost integrity and precision. Our expertise spans from sea freight, customs clearance, logistics and cargo status tracking, making us a preferred logistics partner for importers and multi-national corporations. 
+Nacon Investment has been improving and making big strides through the collective efforts of the management. To connect businesses with international markets, to promote transparency in the maritime industry through technological innovations and ensure efficient delivery of shipments improving supply chain distribution.
+We have recruited and developed a team of professionals here at Nacon Investment, that allows our clients to track the progress of their shipment with us, ensuring transparency and shipment integrity. This move was part of the goals of the company, to ensure shipment integrity and remain as a leader in the maritime industry by embracing technological innovation.
+Our customer-centric approach guarantees that each shipment is treated with integrity and precision. With integrity being our watch word, you can be rest assured that our team will deliver your shipment to its desired destination.
+`
+
+export default About;

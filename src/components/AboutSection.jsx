@@ -1,6 +1,9 @@
 import Button from "./Button";
+import { useNavigate } from "react-router";
 
 export default function AboutSection() {
+  const navigate = useNavigate();
+
   return (
     <section className="w-full flex justify-center">
       <div className="grid grid-cols-1 xl:grid-cols-3 m-4 lg:my-16 lg:mx-12 w-11/12">
@@ -14,6 +17,7 @@ export default function AboutSection() {
             logistics, and supply chain solutions.
           </p>
           <Button
+            onClick={()=>(navigate("/about"))}
             text="Learn More"
             class="p-3 font-semibold text-lg rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer bg-[var(--Accent)] text-[var(--Primary)] hover:invert-10"
           />
