@@ -10,7 +10,7 @@ export default function ServiceSection() {
           <p className="text-md md:text-2xl tracking-wide">
             From one nation to the other. Our years of experience in the
             maritime industry has empowered us to ensure that you receive the
-            best. The services we offer;
+            best. These are the services we offer;
           </p>
         </div>
         <div className="flex md:flex-row gap-x-12 gap-y-8 xl:gap-6 justify-center mx-2 sm:mx-16 md:mx-4 lg:mx-12 flex-col flex-wrap">
