@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="w-screen h-24 flex items-center pl-2 pr-6 md:px-4 lg:px-20 fixed top-0 z-50 justify-between xl:justify-around">
       <Link to="/" className=" text-md sm:text-lg lg:text-2xl tracking-wider font-extrabold cursor-pointer flex items-center md:gap-4">
-        <img src={NaconLogo} className="size-20 md:size-32" />
+        <img src={NaconLogo} className="size-20" />
         <h1 className="uppercase text-[var(--Accent)] font-extrabold">
           Nacon Investment
         </h1>

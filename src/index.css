@@ -13,9 +13,26 @@
   --NavSecondary: #ffffffe3;
   --NavBackgroundTwo: #ffffff84;
   --NavBackground: #ffffff00;
+  --Inline: inline-end;
 }
 .header{
   background-image: url(../src/assets/Image-two.jpg);
+  background-color: var(--Background);
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0vh;
+}
+.about-header{
+  background-image: url(../src/assets/about.jpg);
+  background-color: var(--Background);
+  background-blend-mode: color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0vh;
+}
+.service-header{
+  background-image: url(../src/assets/services.jpg);
   background-color: var(--Background);
   background-blend-mode: color;
   background-repeat: no-repeat;

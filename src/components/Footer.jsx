@@ -5,7 +5,7 @@ export default function Footer(props) {
   var PhoneNo = "+2348033163492"; //Phone Number
 
   return (
-    <footer className="w-full bg-[var(--Accent)] text-[var(--Primary)] py-8 px-6" ref={props.footerRef}>
+    <footer className="w-full bg-[var(--Default)] text-[var(--Primary)] py-8 px-6" ref={props.footerRef}>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         <div>
           <p className="text-[var(--Primary)] mt-2">
