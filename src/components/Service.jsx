@@ -8,7 +8,6 @@ export default function ServiceBody() {
     if (hash) {
       const target = document.getElementById(hash);
       if (target) {
-        // Scroll with slight offset to bring section to the middle
         const yOffset = -window.innerHeight / 2 + target.offsetHeight / 2;
         const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
@@ -18,7 +17,7 @@ export default function ServiceBody() {
 
   return (
     <section className="w-full min-h-max bg-[var(--Primary)] flex flex-col items-center service-page">
-      <div className="text-[var(--Primary)] service-header w-full min-h-[40rem] xl:h-[50rem] flex justify-center flex-col items-start">
+      <div className="text-[var(--Primary)] service-header w-full min-h-[30rem] xl:h-[60vh] flex justify-center flex-col items-start">
         <div className="ml-4 md:ml-12 lg:ml-24">
           <h1 className="text-3xl lg:text-6xl lg:tracking-loose tracking-wider font-bold">
             Our Services
@@ -39,7 +38,7 @@ export default function ServiceBody() {
             >
               <img
                 src={service.image}
-                className="max-w-full lg:min-w-1/2 xl:min-w-1/2 group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-105 flex-1 min-h-full"
+                className="max-w-full lg:min-w-1/2 xl:min-w-1/2 group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-105 flex-1 h-auto"
                 alt={service.alt}
               />
               <div className="lg:min-w-2/5 mx-4 py-5 flex flex-col gap-3 items-start flex-1">
@@ -52,7 +51,7 @@ export default function ServiceBody() {
                 <Button
                   onClick={() => console.log("works")}
                   text="Track Shipment"
-                  class="p-3 font-semibold text-sm lg:text-xl rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer text-[var(--Accent)] bg-[var(--Secondary)] hover:invert-10 my-2"
+                  class="p-3 font-semibold text-sm lg:text-xl rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer text-[var(--Accent)] bg-[var(--Secondary)] hover:invert-10 mt-2"
                   style={service.id === "tracking" ? { display: "flex" } : { display: "none" }}
                 />
               </div>

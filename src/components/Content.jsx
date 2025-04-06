@@ -4,7 +4,7 @@ import VisionImage from "../assets/vision.jpg";
 export default function AboutContent() {
   return (
     <section className="w-full min-h-max bg-[var(--Secondary)] flex items-center flex-col">
-      <div className="text-[var(--Primary)] about-header w-full min-h-[40rem] xl:h-[50rem] flex justify-center flex-col">
+      <div className="text-[var(--Primary)] about-header w-full min-h-[30rem] xl:h-[60vh] flex justify-center flex-col">
         <div className="xl:ml-32 ml-4 md:ml-12">
           <h1 className="text-2xl lg:text-6xl lg:tracking-loose tracking-wider font-bold">
             Nacon Investment Limited

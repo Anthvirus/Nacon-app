@@ -6,7 +6,7 @@ export default function ServiceSection() {
   const navigate = useNavigate();
   return (
     <section className="w-full mt-20 xl:mt-24 text-[var(--Secondary)] gap-10 flex flex-col items-center bg-[var(--Accent)] py-12">
-      <div className="flex flex-col xl:w-11/12 xxl:w-full mx-auto items-start">
+      <div className="flex flex-col xl:w-11/12 xxl:w-full mx-auto items-center">
         <div className="my-12 flex flex-col gap-6 items-start mx-4 md:mx-12">
           <h1 className="text-2xl md:text-5xl mt-2 font-bold">Services</h1>
           <p className="text-md md:text-2xl tracking-wide">
@@ -23,7 +23,7 @@ export default function ServiceSection() {
             >
               <img
                 src={Service.image}
-                className="h-72 lg:h-1/2 w-full group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-110"
+                className="h-auto lg:h-1/2 w-full group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-110"
                 alt={Service.alt}
               />
               <div className="min-h-1/2 w-full px-4 py-5 flex flex-col gap-3 items-start">

@@ -32,7 +32,7 @@ export default function PartnerSection() {
 
   return (
     <section className="w-full bg-[var(--Primary)] overflow-hidden pt-4 pb-20 lg:pb-32 flex-col flex gap-16 lg:gap-24">
-      <h1 className="text-3xl lg:text-5xl mt-4 font-extrabold ml-2 lg:ml-10">
+      <h1 className="text-2xl md:text-5xl mt-4 font-extrabold ml-2 lg:ml-10">
         Our Trusted Partners
       </h1>
       <div className="relative">
