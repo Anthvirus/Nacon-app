@@ -39,6 +39,11 @@
   background-size: cover;
   background-position: 0vh;
 }
+.service-page{
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory y;
+  scroll-snap-align: center;
+}
 body{
 font-family: "Chakra Petch", serif;
 }

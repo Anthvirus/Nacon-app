@@ -6,8 +6,8 @@ export default function AboutSection() {
 
   return (
     <section className="w-full flex justify-center">
-      <div className="grid grid-cols-1 xl:grid-cols-3 m-4 lg:my-16 lg:mx-12 w-11/12">
-        <div className="flex flex-col px-4 py-8 gap-8 rounded-2xl items-start">
+      <div className="grid grid-cols-1 xl:grid-cols-3 m-2 lg:my-16 lg:mx-12 w-11/12">
+        <div className="flex flex-col px-2 py-8 gap-8 rounded-2xl items-start">
           <h1 className="text-2xl md:text-5xl mt-2 font-bold ml-2">About Us</h1>
           <p className="text-md md:text-2xl tracking-wide">
             Nacon Investment Limited is a world-class freight forwarding and
@@ -19,10 +19,10 @@ export default function AboutSection() {
           <Button
             onClick={()=>(navigate("/about"))}
             text="Learn More"
-            class="p-3 font-semibold text-lg rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer bg-[var(--Accent)] text-[var(--Primary)] hover:invert-10"
+            class="p-3 font-semibold text-md lg:text-xl rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer bg-[var(--Accent)] text-[var(--Primary)] hover:invert-10"
           />
         </div>
-        <div className="flex flex-col px-6 py-8 gap-8 items-start xl:border-x border-y xl:border-y-0">
+        <div className="flex flex-col px-2 py-8 gap-8 items-start xl:border-x border-y xl:border-y-0">
           <h1 className="text-2xl md:text-5xl mt-2 font-bold ml-2">
             Our Mission
           </h1>
@@ -33,7 +33,7 @@ export default function AboutSection() {
             highest standards, keeping client satisfaction as our top priority.
           </p>
         </div>
-        <div className="flex flex-col px-4 py-8 gap-8 rounded-2xl items-start">
+        <div className="flex flex-col px-2 py-8 gap-8 rounded-2xl items-start">
           <h1 className="text-2xl md:text-5xl mt-2 font-bold ml-2">
             Our Vision
           </h1>

@@ -8,30 +8,34 @@ export default function ServiceBody() {
     if (hash) {
       const target = document.getElementById(hash);
       if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
+        // Scroll with slight offset to bring section to the middle
+        const yOffset = -window.innerHeight / 2 + target.offsetHeight / 2;
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
   }, []);
 
   return (
     <section className="w-full min-h-max bg-[var(--Primary)] flex flex-col items-center service-page">
-      <div className="text-[var(--Primary)] service-header w-full h-[20rem] xl:h-[35rem] flex justify-center flex-col items-start">
+      <div className="text-[var(--Primary)] service-header w-full min-h-[40rem] xl:h-[50rem] flex justify-center flex-col items-start">
         <div className="ml-4 md:ml-12 lg:ml-24">
-          <h1 className="text-md lg:text-6xl lg:tracking-loose tracking-wider font-bold">
+          <h1 className="text-3xl lg:text-6xl lg:tracking-loose tracking-wider font-bold">
             Our Services
           </h1>
-          <p className="font-semibold text-lg lg:text-2xl">
+          <p className="font-semibold text-md lg:text-2xl">
             Simplifying logistics everyday
           </p>
         </div>
       </div>
+
       <div className="flex flex-col items-center my-16 gap-12">
         <div className="w-11/12 gap-y-6 gap-4 flex flex-col lg:w-2/3 xl:w-5/6">
           {Services.map((service) => (
             <div
               key={service.name}
               id={service.id}
-              className="flex group hover:grayscale-0 grayscale-25 gap-8 overflow-hidden w-full text-[var(--Accent)] bg-[var(--Secondary)] items-center xl:even:flex-row-reverse flex-col xl:flex-row lg:my-6 shadow-md even:bg-[var(--Accent)] even:text-[var(--Secondary)] size-max"
+              className="scroll-mt-40 flex group hover:grayscale-0 grayscale-25 gap-8 overflow-hidden w-full text-[var(--Accent)] bg-[var(--Secondary)] items-center xl:even:flex-row-reverse flex-col xl:flex-row lg:my-6 shadow-md even:bg-[var(--Accent)] even:text-[var(--Secondary)] size-max"
             >
               <img
                 src={service.image}
@@ -45,7 +49,12 @@ export default function ServiceBody() {
                 <p className="text-md lg:text-xl tracking-wide">
                   {service.about}
                 </p>
-                <Button name="Track Shpiment" class="bg-white" />
+                <Button
+                  onClick={() => console.log("works")}
+                  text="Track Shipment"
+                  class="p-3 font-semibold text-sm lg:text-xl rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer text-[var(--Accent)] bg-[var(--Secondary)] hover:invert-10 my-2"
+                  style={service.id === "tracking" ? { display: "flex" } : { display: "none" }}
+                />
               </div>
             </div>
           ))}

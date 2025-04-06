@@ -10,7 +10,7 @@ export default function Home() {
   const footerRef = useRef();
   return (
     <div className="max-w-screen bg-[var(--Secondary)] min-h-max">
-      <header className="flex flex-col min-h-[70vh] xl:h-max header">
+      <header className="flex flex-col min-h-[60vh] xl:h-max header">
         <Navbar />
         <HeroSection footerRef={footerRef}/>
       </header>

@@ -4,23 +4,23 @@ import VisionImage from "../assets/vision.jpg";
 export default function AboutContent() {
   return (
     <section className="w-full min-h-max bg-[var(--Secondary)] flex items-center flex-col">
-      <div className="text-[var(--Primary)] about-header w-full h-[10rem] md:h-[20rem] xl:h-[40rem] flex justify-center flex-col">
+      <div className="text-[var(--Primary)] about-header w-full min-h-[40rem] xl:h-[50rem] flex justify-center flex-col">
         <div className="xl:ml-32 ml-4 md:ml-12">
           <h1 className="text-2xl lg:text-6xl lg:tracking-loose tracking-wider font-bold">
             Nacon Investment Limited
           </h1>
-          <p className="font-semibold text-lg lg:text-2xl">
+          <p className="font-semibold text-md lg:text-2xl">
             Leading the way for logistics excellence and client satisfaction.
           </p>
         </div>
       </div>
       <div className="w-11/12 lg:w-5/6 gap-x-12 gap-y-4 flex flex-col mt-8 mb-2 xl:mb-6 xl:mt-16">
-        <h1 className="text-md md:text-3xl xl:text-6xl font-bold ">About Us</h1>
+        <h1 className="text-2xl md:text-3xl xl:text-6xl font-bold ">About Us</h1>
         <div className="text-md md:text-2xl tracking-wide xl:leading-10 mx-2">
           <img
             src={NaconLogo}
             alt="Nacon Investment Limited"
-            className="float-left size-40 lg:size-64 xl:size-80 mr-6 mb-4 shadow-md"
+            className="float-left size-32 md:size-48 lg:size-64 xl:size-80 mr-6 mb-4 shadow-md"
           />
           <p>
             Nacon Investment Limited is a world-class freight forwarding and
@@ -56,13 +56,13 @@ export default function AboutContent() {
         </div>
       </div>
       <div className="flex flex-col lg:mt-6 mt-12 xl:p-20 px-2 py-16 gap-4 md:gap-12 bg-[var(--Accent)] items-center text-[var(--Primary)]">
-        <div className="gap-4 lg:gap-8 items-center lg:flex-row flex-col flex w-11/12 md:w-1/2 lg:min-w-5/6 h-max">
+        <div className="gap-4 border-b lg:pb-0 lg:border-b-0 pb-2 lg:gap-8 items-center lg:flex-row flex-col flex w-11/12 md:w-1/2 lg:min-w-5/6 h-max">
           <img
             src={MissionImage}
             className="w-auto lg:w-1/2 xl:w-2/5 shadow-md lg:h-full"
           />
-          <div className=" tracking-wide xl:leading-10 m-1 flex flex-col justify-center items-start h-full">
-            <h1 className="text-xl md:text-3xl xl:text-5xl mb-4 font-bold">
+          <div className=" tracking-wide xl:leading-10 m-1 flex flex-col justify-center items-start h-full ">
+            <h1 className="text-2xl md:text-3xl xl:text-5xl mb-4 font-bold">
               Our Mission
             </h1>
             <p className="text-md md:text-xl xl:text-2xl">
@@ -80,7 +80,7 @@ export default function AboutContent() {
             className="w-auto lg:w-1/2 xl:w-2/5 shadow-md lg:h-full"
           />
           <div className="tracking-wide xl:leading-10 m-1 flex flex-col justify-center items-start h-full">
-            <h1 className="text-xl md:text-3xl xl:text-5xl mb-4 font-bold">
+            <h1 className="text-2xl md:text-3xl xl:text-5xl mb-4 font-bold">
               Our Vision
             </h1>
             <p className="text-md md:text-xl xl:text-2xl">

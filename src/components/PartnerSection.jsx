@@ -1,5 +1,5 @@
 import HapagLogo from "../assets/Hapag.svg";
-import GoldLogo from "../assets/Goldstar.jpg"
+import GoldLogo from "../assets/Goldstar.png";
 import OneLogo from "../assets/One.svg";
 import OOCLLogo from "../assets/OOCL.svg";
 import MaerskLogo from "../assets/Maersk.svg";
@@ -24,9 +24,6 @@ const Partners = [
 
 export default function PartnerSection() {
   const duplicatedPartners = [
-    ...Partners,
-    ...Partners,
-    ...Partners,
     ...Partners,
     ...Partners,
     ...Partners,
