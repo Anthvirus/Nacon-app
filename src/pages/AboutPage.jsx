@@ -8,7 +8,7 @@ export default function AboutPage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
-    <section className="max-w-screen">
+    <section className="max-w-screen delay-[5s] ease-in-out">
       <Navbar />
       <AboutContent />
       <Footer />
