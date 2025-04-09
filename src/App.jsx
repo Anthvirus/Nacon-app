@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import ServicePage from "./pages/ServicePage";
 import ScrollToTop from "./components/Scroll";
+import TrackingPage from "./pages/TrackingPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicePage />} />
+        <Route path="/tracking" element={<TrackingPage/> }/>
       </Routes>
     </Router>
   );

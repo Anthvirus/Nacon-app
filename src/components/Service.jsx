@@ -1,9 +1,12 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Services from "../components/ServiceMain";
 import Button from "./Button";
 import TransitionComponent from "./TransitionComponent";
 
 export default function ServiceBody() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     if (hash) {
@@ -45,7 +48,7 @@ export default function ServiceBody() {
               >
                 <img
                   src={service.image}
-                  className="max-w-full lg:min-w-1/2 xl:min-w-1/2 group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-105 flex-1 max-h-1/5 lg:h-auto"
+                  className="max-w-full lg:min-w-1/2 xl:min-w-1/2 group-hover:opacity-90 duration-700 delay-[.0125ms] transition-transform group-hover:scale-105 xl:flex-1 object-cover lg:h-auto"
                   alt={service.alt}
                 />
                 <div className="lg:min-w-2/5 mx-4 py-5 flex flex-col gap-3 items-start flex-1">
@@ -56,7 +59,7 @@ export default function ServiceBody() {
                     {service.about}
                   </p>
                   <Button
-                    onClick={() => console.log("works")}
+                    onClick={() => navigate("/tracking")}
                     text="Track Shipment"
                     class="p-3 font-semibold text-sm lg:text-xl rounded-xl duration-500 delay-[2.5ms] hover:px-4 cursor-pointer text-[var(--Accent)] bg-[var(--Secondary)] hover:invert-10 mt-2"
                     style={

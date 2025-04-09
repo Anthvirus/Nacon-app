@@ -10,7 +10,7 @@ const Links = [
   { name: "Home", url: "/" },
   { name: "About Us", url: "/about" },
   { name: "Services", url: "/services" },
-  { name: "Cargo Status", url: "#" },
+  { name: "Cargo Status", url: "/tracking" },
 ];
 
 export default function Navbar() {
